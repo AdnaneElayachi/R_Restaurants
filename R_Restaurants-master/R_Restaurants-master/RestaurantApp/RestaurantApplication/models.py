@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Addresses(models.Model):
     regione = models.CharField(max_length=100)
     ville = models.CharField(max_length=100)
@@ -52,3 +53,10 @@ class NoteRestaurant(models.Model):
         self.idRestaurant = idRestaurant
         self.note = note
         self.commentaire = commentaire
+
+class MyModel(models.Model):
+    field1 = models.CharField(max_length=100)
+    field2 = models.IntegerField()
+
+    def __str__(self):
+        return self.field1
