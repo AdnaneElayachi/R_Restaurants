@@ -52,12 +52,12 @@ def utilisateur_login(request):
         user = authenticate(request, emailUtilisateur=emailUtilisateur, motDePass=motDePass)
         if user is not None:
             login(request, user)
-            return redirect('')
+            return redirect('home')
         else:
 
-            return render(request, '', {'Erreur': 'le mot de pass ou adress Email incorrect'})
+            return render(request, 'RestaurantApp/RestaurantApplication/templates/src/index.html', {'Erreur': 'le mot de pass ou adress Email incorrect'})
     else:
-        return render(request, '')
+        return render(request, 'RestaurantApp/RestaurantApplication/templates/src/index.html')
 
 
 def utilisateur_register(request):
@@ -70,7 +70,7 @@ def utilisateur_register(request):
     else:
         form = UtilisateurFrom()
         ## page d'utilisateur
-    return render(request, '', {'form': form})
+    return render(request, 'RestaurantApp/RestaurantApplication/templates/src/index.html', {'form': form})
 
 
 # Restaurant
