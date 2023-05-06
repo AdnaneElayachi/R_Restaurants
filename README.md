@@ -19,6 +19,6 @@ Remerciements
 Le site de critique de restaurants s'inspire de différentes plateformes existantes de critiques de restaurants.
 Un merci spécial aux développeurs qui ont contribué aux bibliothèques et frameworks open-source utilisés dans ce projet.
 Contact
-Si vous avez des questions ou avez besoin d'une assistance supplémentaire, n'hésitez pas à nous contacter à l'adresse kariimtouzani@gmail.com.
+Si vous avez des questions ou avez besoin d'une assistance supplémentaire, n'hésitez pas à nous contacter à l'adresse kariimtouzani@gmail.com adnaneealyachi1@gmail.com.
 
 Bonnes critiques !
