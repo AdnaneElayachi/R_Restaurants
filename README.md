@@ -2,6 +2,7 @@
 
 
 Restaurant Review Site : 
+
 Il s'agit d'un site de critique de restaurants qui affiche des informations, des évaluations et des commentaires pour différents restaurants de la ville. Les utilisateurs peuvent s'inscrire ou se connecter au site pour accéder à des fonctionnalités supplémentaires telles que la soumission de leurs propres critiques et commentaires.
 
 Fonctionnalités : 
