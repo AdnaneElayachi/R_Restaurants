@@ -1,4 +1,4 @@
-from django.forms import forms
+from django import forms
 
 from .models import Utilisateur, Addresses, Restaurant, NoteRestaurant
 
@@ -6,11 +6,11 @@ from .models import Utilisateur, Addresses, Restaurant, NoteRestaurant
 class UtilisateurFrom(forms.ModelForm):
     class Meta:
         model = Utilisateur
-        fields = ['id', 'email']
+        fields = '__all__'
 
         def save(self, commit=True):
             user = super(UtilisateurFrom, self).save(commit=False)
-            user.emailUtilisateur = self.cleaned_data['email']
+            user.emailUtilisateur = self.cleaned_data['emailUtilisateur']
             if commit:
                 user.save()
 
@@ -18,11 +18,11 @@ class UtilisateurFrom(forms.ModelForm):
 class RestaurantFrom(forms.ModelForm):
     class Meta:
         model = Restaurant
-        fields = ['Nom Restaurant', 'Adresse Restaurant', 'Type Cuisine']
+        fields = '__all__'
 
         def save(self, commit=True):
             restaurant = super(RestaurantFrom, self).save(commit=False)
-            Restaurant.nomRestaurant = self.cleaned_data['Nom Restaurant']
+            Restaurant.nomRestaurant = self.cleaned_data['nomRestaurant']
             if commit:
                 restaurant.save()
 
@@ -30,10 +30,10 @@ class RestaurantFrom(forms.ModelForm):
 class AdressessFrom(forms.ModelForm):
     class Meta:
         model = Addresses
-        fields = ['regione', 'quartie', 'code Postal']
+        fields = '__all__'
 
 
 class NoteRestaurantForm(forms.Model):
     class Meta:
         model = NoteRestaurant
-        fields = ['idUtilisateur', 'idRestaurant', 'note', 'commentaire']
+        fields = '__all__'
