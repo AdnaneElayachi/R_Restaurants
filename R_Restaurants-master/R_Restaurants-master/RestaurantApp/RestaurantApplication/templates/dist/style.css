@@ -5,11 +5,7 @@
   max-width: 71.25rem;
   width: 100%;
 }
-.nav-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
+
 .grid {
   display: flex;
   flex-direction: column;
