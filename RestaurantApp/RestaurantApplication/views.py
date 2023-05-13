@@ -6,7 +6,7 @@ from .models import *
 
 
 def homePage(request):
-    return render(request, 'R_Restaurants-master/RestaurantApp/RestaurantApplication/templates/dist/index.html')
+    return render(request, 'welcome/dist/index.html')
 
 
 # les fonctions CRUD pour toutes les classes
@@ -55,9 +55,9 @@ def utilisateur_login(request):
             return redirect('home')
         else:
 
-            return render(request, 'RestaurantApp/RestaurantApplication/templates/src/index.html', {'Erreur': 'le mot de pass ou adress Email incorrect'})
+            return render(request, 'welcome/dist/index.html', {'Erreur': 'le mot de pass ou adress Email incorrect'})
     else:
-        return render(request, 'RestaurantApp/RestaurantApplication/templates/src/index.html')
+        return render(request, 'Login_Register/dist/index.html')
 
 
 def utilisateur_register(request):
@@ -70,7 +70,7 @@ def utilisateur_register(request):
     else:
         form = UtilisateurFrom()
         ## page d'utilisateur
-    return render(request, 'RestaurantApp/RestaurantApplication/templates/src/index.html', {'form': form})
+    return render(request, 'Login_Register/dist/index.html', {'form': form})
 
 
 # Restaurant

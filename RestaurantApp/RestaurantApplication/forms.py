@@ -1,5 +1,4 @@
 from django import forms
-
 from .models import Utilisateur, Addresses, Restaurant, NoteRestaurant
 
 
@@ -33,7 +32,7 @@ class AdressessFrom(forms.ModelForm):
         fields = '__all__'
 
 
-class NoteRestaurantForm(forms.Model):
+class NoteRestaurantForm(forms.ModelForm):
     class Meta:
         model = NoteRestaurant
         fields = '__all__'
