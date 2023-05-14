@@ -17,24 +17,24 @@ def get_utilisateur_list(request):
 
 def create_utilisateur(request):
     if request.method == 'Post':
-        form = UtilisateurFrom(request.POST)
+        form = UtilisateurForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('get_utilisateur_list')
     else:
-        form = UtilisateurFrom()
+        form = UtilisateurForm()
     return render(request, '', {'from': form})
 
 
 def update_utilisateur(request, pk):
     utilisateur = get_object_or_404(Utilisateur, pk=pk)
     if request.method == 'POST':
-        form = UtilisateurFrom(request.POST, instance=utilisateur)
+        form = UtilisateurForm(request.POST, instance=utilisateur)
         if form.is_valid():
             form.save()
             return redirect('listUser')
     else:
-        form = UtilisateurFrom(instance=utilisateur)
+        form = UtilisateurForm(instance=utilisateur)
     return render(request, '', {'form': form, 'utilisateur': utilisateur})
 
 
@@ -62,13 +62,13 @@ def utilisateur_login(request):
 
 def utilisateur_register(request):
     if request.method == 'POST':
-        form = UtilisateurFrom(request.POST)
+        form = UtilisateurForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
             return redirect('home')
     else:
-        form = UtilisateurFrom()
+        form = UtilisateurForm()
         ## page d'utilisateur
     return render(request, 'Login_Register/dist/index.html', {'form': form})
 

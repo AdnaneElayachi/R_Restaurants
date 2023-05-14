@@ -2,13 +2,13 @@ from django import forms
 from .models import Utilisateur, Addresses, Restaurant, NoteRestaurant
 
 
-class UtilisateurFrom(forms.ModelForm):
+class UtilisateurForm(forms.ModelForm):
     class Meta:
         model = Utilisateur
         fields = '__all__'
 
         def save(self, commit=True):
-            user = super(UtilisateurFrom, self).save(commit=False)
+            user = super(UtilisateurForm, self).save(commit=False)
             user.emailUtilisateur = self.cleaned_data['emailUtilisateur']
             if commit:
                 user.save()
